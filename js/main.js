@@ -1,9 +1,40 @@
+// Hamburger menu
+const hamburger = document.querySelector('.nav-hamburger');
+const mobileNav = document.getElementById('nav-mobile');
+
+function closeMobileMenu() {
+  hamburger.classList.remove('open');
+  mobileNav.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', 'false');
+  mobileNav.setAttribute('aria-hidden', 'true');
+}
+
+hamburger.addEventListener('click', () => {
+  const isOpen = hamburger.classList.toggle('open');
+  mobileNav.classList.toggle('open', isOpen);
+  hamburger.setAttribute('aria-expanded', String(isOpen));
+  mobileNav.setAttribute('aria-hidden', String(!isOpen));
+});
+
+// Close on outside click
+document.addEventListener('click', e => {
+  if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) {
+    closeMobileMenu();
+  }
+});
+
+// Close on Escape key
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeMobileMenu();
+});
+
 // Nav smooth scroll with fixed-header offset
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', e => {
     const target = document.querySelector(link.getAttribute('href'));
     if (!target) return;
     e.preventDefault();
+    closeMobileMenu();
     const navHeight = document.querySelector('nav').offsetHeight;
     const top = target.getBoundingClientRect().top + window.scrollY - navHeight;
     window.scrollTo({ top, behavior: 'smooth' });
