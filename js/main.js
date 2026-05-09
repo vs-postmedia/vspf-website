@@ -59,18 +59,4 @@ const tickerWrap = document.querySelector('.ticker-wrap');
 tickerWrap.addEventListener('mouseenter', () => ticker.style.animationPlayState = 'paused');
 tickerWrap.addEventListener('mouseleave', () => ticker.style.animationPlayState = 'running');
 
-// Form
-function handleSubmit() {
-  const input = document.getElementById('email');
-  const success = document.getElementById('form-success');
-  const note = document.querySelector('.form-note');
-  if (!input.value || !input.value.includes('@')) {
-    input.style.borderColor = 'var(--accent2)';
-    setTimeout(() => input.style.borderColor = '', 1200);
-    return;
-  }
-  input.disabled = true;
-  document.querySelector('.form-row button').disabled = true;
-  note.style.display = 'none';
-  success.style.display = 'block';
-}
+// MailerLite form handled via Universal script in <head>

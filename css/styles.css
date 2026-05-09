@@ -29,7 +29,6 @@ nav {
   z-index: 100;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 0 2.5rem;
   height: 58px;
   background: rgba(8, 8, 8, 0.92);
@@ -52,6 +51,7 @@ nav {
   display: flex;
   gap: 2.5rem;
   list-style: none;
+  margin-left: auto;
 }
 
 .nav-links a {
@@ -77,6 +77,8 @@ nav {
   border: none;
   cursor: pointer;
   padding: 6px;
+  margin-left: auto;
+  flex-shrink: 0;
   z-index: 101;
 }
 
@@ -577,70 +579,12 @@ section { border-bottom: 1px solid var(--border); }
   gap: 1rem;
 }
 
-.notify-form label {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--dim);
-  margin-bottom: 0.25rem;
-  display: block;
-}
-
-.form-row {
-  display: flex;
-  gap: 0;
-}
-
-.form-row input[type="email"] {
-  flex: 1;
-  background: transparent;
-  border: 1px solid var(--border);
-  border-right: none;
-  padding: 0.85rem 1.25rem;
-  color: var(--white);
-  font-family: 'Barlow', sans-serif;
-  font-size: 0.9rem;
-  outline: none;
-  transition: border-color 0.2s;
-}
-
-.form-row input[type="email"]:focus { border-color: var(--accent); }
-.form-row input[type="email"]::placeholder { color: var(--dim); }
-
-.form-row button {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 700;
-  font-size: 0.8rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  background: var(--accent);
-  color: var(--black);
-  border: 1px solid var(--accent);
-  padding: 0 1.75rem;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-}
-
-.form-row button:hover {
-  background: transparent;
-  color: var(--accent);
-}
-
 .form-note {
   font-size: 0.75rem;
   color: var(--dim);
   line-height: 1.5;
 }
 
-.form-success {
-  display: none;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 1rem;
-  color: var(--accent);
-  letter-spacing: 0.08em;
-}
 
 /* ── FOOTER ────────────────────────────────────────── */
 footer {
@@ -696,6 +640,10 @@ footer {
   color: var(--dim);
   text-decoration: none;
   transition: color 0.2s;
+}
+#zeffy-signup-form {
+  height: 175px;
+  position: relative;
 }
 
 .footer-social a:hover { color: var(--white); }
