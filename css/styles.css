@@ -138,33 +138,43 @@ nav {
   pointer-events: auto;
 }
 
+/* ── HERO CAROUSEL ─────────────────────────────────── */
+.hero-carousel {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.8s ease;
+}
+
+.hero-slide.active { opacity: 1; }
+
 /* ── HERO ──────────────────────────────────────────── */
 .hero {
   min-height: 100svh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 0 2.5rem 4rem;
+  padding: 0 4rem 4rem;
   position: relative;
   border-bottom: 1px solid var(--border);
   overflow: hidden;
 }
 
-.hero-grid {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(var(--border) 1px, transparent 1px),
-    linear-gradient(90deg, var(--border) 1px, transparent 1px);
-  background-size: 80px 80px;
-  opacity: 0.4;
-  pointer-events: none;
-}
 
 .hero-vignette {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, transparent 30%, var(--black) 100%);
+  background:
+    linear-gradient(to bottom, rgba(8,8,8,0.35) 0%, rgba(8,8,8,0.75) 60%, rgba(8,8,8,0.96) 100%),
+    radial-gradient(ellipse at center, transparent 20%, rgba(8,8,8,0.55) 100%);
   pointer-events: none;
 }
 
@@ -668,7 +678,7 @@ footer {
 @media (max-width: 900px) {
   nav { padding: 0 1.5rem; }
   .nav-links { gap: 1.5rem; }
-  .hero { padding: 0 1.5rem 3rem; }
+  .hero { padding: 0 2rem 3rem; }
   .container { padding: 0 1.5rem; }
   .section-pad { padding: 4rem 0; }
   .intro-grid { grid-template-columns: 1fr; gap: 3rem; }

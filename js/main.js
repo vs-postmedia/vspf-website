@@ -59,4 +59,15 @@ const tickerWrap = document.querySelector('.ticker-wrap');
 tickerWrap.addEventListener('mouseenter', () => ticker.style.animationPlayState = 'paused');
 tickerWrap.addEventListener('mouseleave', () => ticker.style.animationPlayState = 'running');
 
+// Hero carousel
+const slides = document.querySelectorAll('.hero-slide');
+if (slides.length > 1) {
+  let current = 0;
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 5000);
+}
+
 // MailerLite form handled via Universal script in <head>
