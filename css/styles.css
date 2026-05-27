@@ -67,6 +67,16 @@ nav {
 
 .nav-links a:hover { color: var(--white); }
 
+.nav-donate {
+  display: inline-flex;
+  align-items: center;
+  background: none;
+  cursor: pointer;
+  padding: 0.45rem 1.1rem;
+  margin-left: 2rem;
+  flex-shrink: 0;
+}
+
 /* ── HAMBURGER ──────────────────────────────────────── */
 .nav-hamburger {
   display: none;
@@ -115,6 +125,9 @@ nav {
 
 .nav-mobile li { border-bottom: 1px solid var(--border); }
 .nav-mobile li:first-child { border-top: 1px solid var(--border); }
+
+.nav-mobile li:last-child { border-bottom: none; padding: 1rem 0 0.5rem; }
+.nav-mobile li:last-child .btn { width: 100%; text-align: center; display: block; }
 
 .nav-mobile a {
   display: block;
@@ -697,6 +710,7 @@ footer {
 
 @media (max-width: 600px) {
   .nav-links { display: none; }
+  .nav-donate { display: none; }
   .nav-hamburger { display: flex; }
   .nav-mobile { display: flex; }
   .hero-meta { flex-direction: column; align-items: flex-start; }
