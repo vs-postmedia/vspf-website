@@ -160,19 +160,14 @@ nav {
 
 .hero-slide {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: -10%;
+  bottom: 0;
+  background-size: cover;
+  background-position: right center;
   opacity: 0;
   transition: opacity 1.8s ease;
-}
-
-.hero-slide picture,
-.hero-slide img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
 }
 
 .hero-slide.active { opacity: 1; }
