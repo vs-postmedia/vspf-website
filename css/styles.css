@@ -570,6 +570,47 @@ section { border-bottom: 1px solid var(--border); }
   color: var(--dim);
 }
 
+/* ── WHO WE ARE ────────────────────────────────────── */
+.who-we-are {
+  background: var(--off-black);
+}
+
+.who-we-are h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  margin-bottom: 2.5rem;
+}
+
+.who-we-are h2 span { color: var(--dim); }
+
+.who-we-are-body {
+  max-width: 72ch;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.who-we-are-body p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--dim);
+}
+
+.who-we-are-body strong {
+  color: var(--white);
+  font-weight: 500;
+}
+
+.who-we-are-body a {
+  color: var(--white);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* ── NOTIFY ────────────────────────────────────────── */
 .notify {
   background: var(--off-black);
