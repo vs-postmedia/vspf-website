@@ -662,6 +662,12 @@ footer {
   gap: 2rem;
 }
 
+.footer-image-credits p {
+    font-size: 1rem;
+  line-height: 1.7;
+  color: var(--dim);
+}
+
 .footer-brand {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 800;
