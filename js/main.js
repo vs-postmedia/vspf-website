@@ -56,8 +56,10 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 // Ticker pause on hover
 const ticker = document.querySelector('.ticker');
 const tickerWrap = document.querySelector('.ticker-wrap');
-tickerWrap.addEventListener('mouseenter', () => ticker.style.animationPlayState = 'paused');
-tickerWrap.addEventListener('mouseleave', () => ticker.style.animationPlayState = 'running');
+if (ticker && tickerWrap) {
+  tickerWrap.addEventListener('mouseenter', () => ticker.style.animationPlayState = 'paused');
+  tickerWrap.addEventListener('mouseleave', () => ticker.style.animationPlayState = 'running');
+}
 
 // Hero carousel
 const slides = document.querySelectorAll('.hero-slide');
