@@ -822,9 +822,10 @@ footer {
   height: 175px;
   position: relative;
 }
-#zeffy-signup-form-events {
+#zeffy-signup-form-events > div {
   height: 175px;
-  position: relative;
+  padding-top: 2rem;
+  text-align: left !important;
 }
 
 .footer-social a:hover { color: var(--white); }
