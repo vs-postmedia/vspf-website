@@ -823,8 +823,11 @@ footer {
   position: relative;
 }
 #zeffy-signup-form-events {
-  padding-top: 2rem;
+  padding-top: 3rem;
   text-align: left !important;
+}
+#zeffy-signup-form-events > div > div {
+  margin: inherit !important;
 }
 
 .footer-social a:hover { color: var(--white); }
