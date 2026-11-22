@@ -822,8 +822,7 @@ footer {
   height: 175px;
   position: relative;
 }
-#zeffy-signup-form-events > div {
-  height: 175px;
+#zeffy-signup-form-events {
   padding-top: 2rem;
   text-align: left !important;
 }
